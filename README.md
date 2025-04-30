@@ -61,7 +61,7 @@ To run the notebooks in this repository:
 2. Start JupyterLab using `uv run jupyter lab`
 3. When opening a notebook, select the "nv-pipecat-env" kernel from the kernel selector:
 
-![Select nv-pipecat-env kernel](docs/images/kernel-selection.png)
+![Select nv-pipecat-env kernel](docs/images/kernel.png)
 
 > **Important**: Make sure "nv-pipecat-env" is selected as shown in the image above. If you see "Python 3" or another kernel name, click the kernel name in the top-right to change it.
 
