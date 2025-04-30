@@ -1,17 +1,32 @@
 [project]
-name = "ace-controller-nb"
+name = "nvidia-pipecat-notebooks"
 version = "0.1.0"
-description = "ACE Controller Teaching Kit"
+description = "Teaching kit for building end-to-end digital human pipelines using ACE Controller and NVIDIA-pipecat"
+authors = [
+    {name = "NVIDIA Corporation"}
+]
+readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    # Notebook environment
     "jupyterlab",
     "notebook",
-    "ipykernel"
+    "ipykernel",
+    
+    # Core dependencies
+    "nvidia-pipecat==0.1.0",
+    "pipecat-ai[nim,daily,openai,riva,silero]==0.0.57",
+    "websockets==13.1",
+    "fastapi==0.115.12",
+    "uvicorn==0.34.2",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"] 
