@@ -29,11 +29,11 @@ git clone https://github.com/your-username/ace-controller-nb.git
 cd ace-controller-nb
 ```
 
-3. Create and activate a virtual environment with Python 3.12:
+2. Create and activate a virtual environment with Python 3.12:
 ```bash
 # On macOS/Linux
 uv venv --python python3.12 .venv
-# Or: uv venv --python /usr/local/bin/python3.12 .venv
+source .venv/bin/activate
 
 # On Windows PowerShell
 uv venv --python python3.12 .venv 
@@ -42,9 +42,6 @@ uv venv --python python3.12 .venv
 # On Windows Command Prompt
 uv venv --python python3.12 .venv
 .venv\Scripts\activate.bat
-
-# Verify correct Python version in venv
-source .venv/bin/activate
 ```
 
 4. Install required packages:
