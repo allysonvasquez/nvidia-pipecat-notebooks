@@ -29,26 +29,36 @@ git clone https://github.com/your-username/ace-controller-nb.git
 cd ace-controller-nb
 ```
 
-2. Create and activate a virtual environment using uv:
+3. Create and activate a virtual environment with Python 3.12:
 ```bash
-uv venv .venv
+# On macOS/Linux
+uv venv --python python3.12 .venv
+# Or: uv venv --python /usr/local/bin/python3.12 .venv
 
-source .venv/bin/activate  # On Unix/macOS
-# or
-.venv\Scripts\activate  # On Windows
+# On Windows PowerShell
+uv venv --python python3.12 .venv 
+.\.venv\Scripts\activate
+
+# On Windows Command Prompt
+uv venv --python python3.12 .venv
+.venv\Scripts\activate.bat
+
+# Verify correct Python version in venv
+source .venv/bin/activate
 ```
 
-3. Install required packages:
+4. Install required packages:
 ```bash
+# Install dependencies
 uv pip install -e .
 ```
 
-4. Register the Jupyter kernel:
+5. Register the Jupyter kernel:
 ```bash
 uv run ipython kernel install --user --name=nv-pipecat-env
 ```
 
-5. Start JupyterLab:
+6. Start JupyterLab:
 ```bash
 uv run jupyter lab
 ```
@@ -66,6 +76,53 @@ To run the notebooks in this repository:
 > **Important**: Make sure "nv-pipecat-env" is selected as shown in the image above. If you see "Python 3" or another kernel name, click the kernel name in the top-right to change it.
 
 4. The notebooks will run in your Python 3.12 environment with all the required dependencies
+
+## Troubleshooting
+
+### Common Issues
+
+1. Wrong Python Version
+```
+Error: Failed to build nvidia-pipecat-notebooks
+```
+Solution: Ensure you're using Python 3.12.x exactly. Other versions are not supported.
+
+3. Kernel Not Found
+```
+Kernel 'nv-pipecat-env' not found
+```
+Solution: Re-run the kernel installation:
+```bash
+uv run ipython kernel install --user --name=nv-pipecat-env
+```
+
+4. Permission Issues (Linux/macOS)
+```
+error: failed to copy file... Permission denied
+```
+Solution: Don't use sudo. Instead, ensure your user owns the directory:
+```bash
+chown -R $USER:$USER .
+```
+
+### Still Having Issues?
+
+1. Clean your environment and start fresh:
+```bash
+# Remove existing environment
+rm -rf .venv  # (Unix/macOS)
+rmdir /s /q .venv  # (Windows)
+
+# Create new environment
+uv venv .venv
+# Activate and install as shown above
+```
+
+2. Check your pip and uv are up to date:
+```bash
+pip install --upgrade pip
+pip install --upgrade uv
+```
 
 ## Repository Structure
 
