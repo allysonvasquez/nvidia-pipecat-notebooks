@@ -1462,7 +1462,7 @@ dependencies = [
     { name = "jupyterlab" },
     { name = "notebook" },
     { name = "nvidia-pipecat" },
-    { name = "pipecat-ai", extra = ["nim", "openai", "riva", "silero"] },
+    { name = "pipecat-ai", extra = ["local", "nim", "openai", "riva", "silero"] },
     { name = "uvicorn" },
     { name = "websockets" },
 ]
@@ -1474,7 +1474,7 @@ requires-dist = [
     { name = "jupyterlab" },
     { name = "notebook" },
     { name = "nvidia-pipecat", specifier = "==0.1.0" },
-    { name = "pipecat-ai", extras = ["nim", "openai", "riva", "silero"], specifier = ">=0.0.57" },
+    { name = "pipecat-ai", extras = ["nim", "openai", "riva", "silero", "local"], specifier = ">=0.0.57" },
     { name = "uvicorn", specifier = ">=0.34.2" },
     { name = "websockets", specifier = ">=13.1" },
 ]
@@ -1724,6 +1724,9 @@ wheels = [
 ]
 
 [package.optional-dependencies]
+local = [
+    { name = "pyaudio" },
+]
 nim = [
     { name = "openai" },
 ]
@@ -1848,6 +1851,16 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/cd/05/0a34433a064256a578f1783a10da6df098ceaa4a57bbeaa96a6c0352786b/pure_eval-0.2.3.tar.gz", hash = "sha256:5f4e983f40564c576c7c8635ae88db5956bb2229d7e9237d03b3c0b0190eaf42", size = 19752 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl", hash = "sha256:1db8e35b67b3d218d818ae653e27f06c3aa420901fa7b081ca98cbedc874e0d0", size = 11842 },
+]
+
+[[package]]
+name = "pyaudio"
+version = "0.2.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/1d/8878c7752febb0f6716a7e1a52cb92ac98871c5aa522cba181878091607c/PyAudio-0.2.14.tar.gz", hash = "sha256:78dfff3879b4994d1f4fc6485646a57755c6ee3c19647a491f790a0895bd2f87", size = 47066 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/45/8d2b76e8f6db783f9326c1305f3f816d4a12c8eda5edc6a2e1d03c097c3b/PyAudio-0.2.14-cp312-cp312-win32.whl", hash = "sha256:5fce4bcdd2e0e8c063d835dbe2860dac46437506af509353c7f8114d4bacbd5b", size = 144750 },
+    { url = "https://files.pythonhosted.org/packages/b0/6a/d25812e5f79f06285767ec607b39149d02aa3b31d50c2269768f48768930/PyAudio-0.2.14-cp312-cp312-win_amd64.whl", hash = "sha256:12f2f1ba04e06ff95d80700a78967897a489c05e093e3bffa05a84ed9c0a7fa3", size = 164126 },
 ]
 
 [[package]]
