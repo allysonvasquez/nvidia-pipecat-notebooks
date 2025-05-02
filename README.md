@@ -1,6 +1,6 @@
-# ACE Controller Teaching Kit
+# Digital Human Teaching Kit Technical Notebooks
 
-This repository serves as a comprehensive teaching kit for building end-to-end digital human pipelines using the ACE Controller and NVIDIA-pipecat. It provides hands-on examples, tutorials, and best practices for developing digital human applications. 
+Hello! This repository serves as a comprehensive teaching kit for building end-to-end digital human pipelines using the ACE Controller and NVIDIA-pipecat. It provides hands-on examples, tutorials, and best practices for developing digital human applications.
 
 ## Who is this for?
 This is for academic use, and as such is geared more towards understanding the nvidia-pipecat library and the development around digital human pipelines.
@@ -20,6 +20,15 @@ The teaching kit focuses on:
 - NVIDIA-pipecat for agent pipeline development
 - End-to-end digital human pipeline implementation
 - Best practices and patterns for digital human design
+
+## Module Dependencies & Flow
+
+1. **Module 0** ensures your machines and cloud accounts are ready.  
+2. **Module 1** introduces the blueprint and a minimal stub pipeline—no real audio or AI yet.  
+3. **Module 2** swaps in real STT/TTS and a basic LLM agent using `nvidia-pipecat`.  
+4. **Module 3–4** deepen the "mind" and add external knowledge & multimodal outputs.  
+5. **Module 5–6** strengthen reliability and end‑user integration.  
+6. **Module 7** is your chance to innovate: build, test, and showcase a production‑quality digital human.
 
 ## Development Environment Setup
 

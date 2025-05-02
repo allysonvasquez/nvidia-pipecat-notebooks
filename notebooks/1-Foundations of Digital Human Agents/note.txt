@@ -1,0 +1,3 @@
+This module will also point to the DIGITAL HUMAN Blueprint provided by the Tokkio team to experience a production grade digital human conversational experience.
+
+This note is a placeholder for this deliverable.

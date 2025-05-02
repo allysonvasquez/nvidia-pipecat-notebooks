@@ -15,7 +15,7 @@ dependencies = [
     
     # Core dependencies
     "nvidia-pipecat==0.1.0",
-    "pipecat-ai[nim,openai,riva,silero]>=0.0.57",
+    "pipecat-ai[nim,openai,riva,silero,local]>=0.0.57",
     "websockets>=13.1",
     "fastapi>=0.115.12",
     "uvicorn>=0.34.2",
