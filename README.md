@@ -1,159 +1,37 @@
-# Digital Human Teaching Kit Technical Notebooks
+# Digital Human Teaching Kit
 
-Hello! This repository serves as a comprehensive teaching kit for building end-to-end digital human pipelines using the ACE Controller and NVIDIA-pipecat. It provides hands-on examples, tutorials, and best practices for developing digital human applications.
+## What You'll Learn
+A high-level explanation of the learning journey:
+- How to build end-to-end digital human pipelines
+- Use of the NVIDIA ACE Controller and Pipecat
+- Integration of STT, TTS, LLMs, Guardrails, RAG, and animation
+- Deployment-ready agents with speech and memory
 
-## Who is this for?
-This is for academic use, and as such is geared more towards understanding the nvidia-pipecat library and the development around digital human pipelines.
+## Who This Is For
+Targeted at master's-level students and developers exploring agent pipelines and interactive avatars.
 
-## Prerequisites
+## Teaching Kit Structure
+| Module | Topic                                      | Outcome                                                      |
+|--------|--------------------------------------------|--------------------------------------------------------------|
+| 0      | Infrastructure Setup                       | Local & cloud setup, install Pipecat, configure environment  |
+| 1      | Pipecat Framework Fundamentals             | Understand pipeline, frames, processors, integrations        |
+| 2      | Speech-to-Speech Voice Agents              | Build streaming voice agents with STT, TTS, turn-taking      |
+| 3      | LLM Integration & Context Management       | Integrate LLMs, manage context, author & harden guardrails   |
+| 4      | Multimodal Capabilities & RAG              | Process text/audio/images, integrate vision, implement RAG   |
+| 5      | Advanced Pipeline Features & Quality Control| Function calling, tool use, streaming APIs, testing         |
+| 6      | Transport & UI Integration                 | WebRTC, WebSocket, build web UIs, real-time communication    |
+| 7      | Capstone Project                           | Design, build, and deploy a complete digital human pipeline  |
 
-- Python 3.12 (required)
-- [uv](https://github.com/astral-sh/uv) package manager
-- You will need an NVIDIA_API_KEY (free) by making an account on the [NVIDIA API Catalog](build.nvidia.com)
-  - We recommend to create a `.env` file and store it as `NVIDIA_API_KEY=your_key_here`
-  - This setup allows the notebooks to run on ANY device. For local deployment options, explore the [NVIDIA ACE Controller documentation](https://docs.nvidia.com/ace/ace-controller-microservice/1.0/index.html)
+## 🧭 Learning Flow
+Recommended progression:
+1. Complete setup (Module 0)
+2. Follow notebook modules in order
+3. Work through activities and optional extensions
+4. Complete the capstone and share your results
 
-## Overview
+## 🔧 Setting Up Your Environment
+Installation has been moved to [`0-setup/README.md`](./0-setup/README.md) for clarity.
 
-The teaching kit focuses on:
-- Integration with ACE Controller for digital human development
-- NVIDIA-pipecat for agent pipeline development
-- End-to-end digital human pipeline implementation
-- Best practices and patterns for digital human design
-
-## Module Dependencies & Flow
-
-1. **Module 0** ensures your machines and cloud accounts are ready.  
-2. **Module 1** introduces the blueprint and a minimal stub pipeline—no real audio or AI yet.  
-3. **Module 2** swaps in real STT/TTS and a basic LLM agent using `nvidia-pipecat`.  
-4. **Module 3–4** deepen the "mind" and add external knowledge & multimodal outputs.  
-5. **Module 5–6** strengthen reliability and end‑user integration.  
-6. **Module 7** is your chance to innovate: build, test, and showcase a production‑quality digital human.
-
-## Development Environment Setup
-
-1. Clone this repository:
-```bash
-git clone https://github.com/your-username/ace-controller-nb.git
-cd ace-controller-nb
-```
-
-2. Create and activate a virtual environment with Python 3.12:
-```bash
-# On macOS/Linux
-uv venv --python python3.12 .venv
-source .venv/bin/activate
-
-# On Windows PowerShell
-uv venv --python python3.12 .venv 
-.\.venv\Scripts\activate
-
-# On Windows Command Prompt
-uv venv --python python3.12 .venv
-.venv\Scripts\activate.bat
-```
-
-4. Install required packages:
-```bash
-# Install dependencies
-uv pip install -e .
-```
-
-5. Register the Jupyter kernel:
-```bash
-uv run ipython kernel install --user --name=nv-pipecat-env
-```
-
-6. Start JupyterLab:
-```bash
-uv run jupyter lab
-```
-
-## Running Notebooks Locally
-
-To run the notebooks in this repository:
-
-1. Make sure you've completed the development environment setup above
-2. Start JupyterLab using `uv run jupyter lab`
-3. When opening a notebook, select the "nv-pipecat-env" kernel from the kernel selector:
-
-![Select nv-pipecat-env kernel](docs/images/kernel.png)
-
-> **Important**: Make sure "nv-pipecat-env" is selected as shown in the image above. If you see "Python 3" or another kernel name, click the kernel name in the top-right to change it.
-
-4. The notebooks will run in your Python 3.12 environment with all the required dependencies
-
-## Troubleshooting
-
-### Common Issues
-
-1. Wrong Python Version
-```
-Error: Failed to build nvidia-pipecat-notebooks
-```
-Solution: Ensure you're using Python 3.12.x exactly. Other versions are not supported.
-
-3. Kernel Not Found
-```
-Kernel 'nv-pipecat-env' not found
-```
-Solution: Re-run the kernel installation:
-```bash
-uv run ipython kernel install --user --name=nv-pipecat-env
-```
-
-4. Permission Issues (Linux/macOS)
-```
-error: failed to copy file... Permission denied
-```
-Solution: Don't use sudo. Instead, ensure your user owns the directory:
-```bash
-chown -R $USER:$USER .
-```
-
-### Still Having Issues?
-
-1. Clean your environment and start fresh:
-```bash
-# Remove existing environment
-rm -rf .venv  # (Unix/macOS)
-rmdir /s /q .venv  # (Windows)
-
-# Create new environment
-uv venv .venv
-# Activate and install as shown above
-```
-
-2. Check your pip and uv are up to date:
-```bash
-pip install --upgrade pip
-pip install --upgrade uv
-```
-
-## Repository Structure
-
-- `notebooks/`: Jupyter notebooks containing tutorials and examples
-- `src/`: Source code for reusable components and utilities
-
-## Environment Management
-
-This project uses a `.gitignore` file to exclude:
-- Virtual environment directories (`.venv/`, `.env/`)
-- Python cache files (`__pycache__/`)
-- Jupyter notebook checkpoints
-- Environment variable files
-- IDE-specific files
-- OS-specific files
-
-Make sure to create your own `.env` file for any environment-specific configurations.
-
-## Getting Started
-
-1. Clone this repository
-2. Set up your development environment as described above
-3. Explore the notebooks in the `notebooks/` directory
-4. Follow the tutorials to build your first digital human pipeline
-
-## Contributing
+---
 
 Contributions are welcome as this is currently under development!
