@@ -1,5 +1,11 @@
 # Digital Human Teaching Kit
 
+Welcome to the Digital Humans Course!
+
+In this course, you'll explore how to map out the end-to-end architecture behind AI-driven digital humans. You'll build a high-level understanding of the pipeline's core layers—voice I/O, cognitive engine, and animation—and how they work together to enable real-time, interactive experiences. These foundational notebooks will set the stage for implementation of your own Digital Human Agent.
+
+> **Note:** This course assumes familiarity with Python, foundational AI concepts, and introductory software engineering. Upcoming notebooks will build off of and use the Pipecat framework for hands-on exercises.
+
 ## What You'll Learn
 A high-level explanation of the learning journey:
 - How to build end-to-end digital human pipelines
@@ -8,7 +14,7 @@ A high-level explanation of the learning journey:
 - Deployment-ready agents with speech and memory
 
 ## Who This Is For
-Targeted at master's-level students and developers exploring agent pipelines and interactive avatars.
+Targeted at grad-level students and developers exploring agentic pipelines and e2e interactive avatars.
 
 ## Teaching Kit Structure
 | Module | Topic                                      | Outcome                                                      |
@@ -22,15 +28,15 @@ Targeted at master's-level students and developers exploring agent pipelines and
 | 6      | Transport & UI Integration                 | WebRTC, WebSocket, build web UIs, real-time communication    |
 | 7      | Capstone Project                           | Design, build, and deploy a complete digital human pipeline  |
 
-## 🧭 Learning Flow
+## Learning Flow
 Recommended progression:
 1. Complete setup (Module 0)
 2. Follow notebook modules in order
 3. Work through activities and optional extensions
-4. Complete the capstone and share your results
+4. Complete the capstone and share your results!
 
-## 🔧 Setting Up Your Environment
-Installation has been moved to [`0-setup/README.md`](./0-setup/README.md) for clarity.
+## Get Started
+Setup your development environment using the instructions at [`0-setup/README.md`](notebooks/0-Setup/README.md) for clarity.
 
 ---
 
