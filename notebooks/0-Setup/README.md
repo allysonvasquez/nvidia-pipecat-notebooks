@@ -1,8 +1,13 @@
 # Environment Setup Guide
 Welcome! This guide will help you set up your environment to run the Digital Human Teaching Kit notebooks.
 
-> **Prerequisites:**
-> - You need to be running **macOS**, **Linux**, or **Windows Subsystem for Linux (WSL)**.
+**Prerequisites:**
+- You need to be running **macOS**, **Linux**, or **Windows Subsystem for Linux (WSL)**.
+- **Python 3.12** is required. [Download Python 3.12 here.](https://www.python.org/downloads/)
+- **uv** tool is required. Install it with:
+    ```bash
+    pip install uv
+    ```
 
 
 ## Quickstart
@@ -68,7 +73,6 @@ uv run jupyter lab
   ```bash
   # Remove existing environment
   rm -rf .venv  # (Unix/macOS)
-  rmdir /s /q .venv  # (Windows)
 
   # Create new environment
   uv venv .venv
