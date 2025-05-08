@@ -36,7 +36,14 @@ Welcome! This guide will help you set up your environment to run the Digital Hum
    uv run jupyter lab
    ```
 
+### Ensure the Jupyter Kernel is Selected
+After setting up, make sure to select the `nv-pipecat-env` kernel in JupyterLab before running any notebooks. This ensures all dependencies and environment variables are available.
+
+![Select the nv-pipecat-env kernel](../../docs/images/kernel.png)
+
+
 ## Tips
+
 - If you've aleady set up a virtual environment and kernel, simply run the following to start a session.
 ```
 source .venv/bin/activate
