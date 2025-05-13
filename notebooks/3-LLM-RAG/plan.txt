@@ -1,0 +1,7 @@
+LLM
+
+Rails to guide
+
+RAG for additional info
+
+->> would flow into mod4
