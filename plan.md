@@ -2,6 +2,8 @@
 
 Each module lists intended lessons, current coverage, and actionable next steps.
 
+
+
 ---
 
 ## Module 0: Setup
@@ -131,6 +133,8 @@ Each module lists intended lessons, current coverage, and actionable next steps.
 - Build all substantive multimodal content (vision will be main focus).
 - Add multimodal pipeline assembly.
 
+look into differences between RAG 2.0 and Tokkio-RAG implementations.
+
 ---
 
 ## Module 5: Advanced Features & Quality Control
@@ -141,14 +145,20 @@ Each module lists intended lessons, current coverage, and actionable next steps.
   - Integrating facial animation with speech
   - Emotion-based expression and blendshapes
   - Synchronizing audio and visual outputs
+
+focus more on tokkio introduction, can move unit testing to each module.
+
 - **5.2:** Pipeline Testing Frameworks
   - Unit testing for digital human pipelines
   - Test scenarios and expectations
   - Automated QA workflows
+  - NOTE - could just incorporate unit tests into each module rather than dedicating. 
 - **5.3:** Performance Monitoring and Analytics
   - Telemetry and metrics collection
   - Pipeline performance analysis
   - Continuous improvement strategies
+
+Will need to introduce tokkio pipeline, reference animation setup 
 
 **Current Notebooks:**
 - `Function-Calling.ipynb`: Tool use and function calling
@@ -177,6 +187,8 @@ Each module lists intended lessons, current coverage, and actionable next steps.
   - Scaling digital human services
   - Containerization and cloud deployment
   - Production-ready configurations
+
+ui customization from tokkio side. for GA- UI is supported in ace configurator
 
 **Current Notebooks:**
 - *(Currently empty)*
