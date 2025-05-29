@@ -1,10 +1,18 @@
 import base64
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 invoke_url = "https://ai.api.nvidia.com/v1/genai/stabilityai/stable-diffusion-xl"
 
+api_key = os.getenv("NVIDIA_API_KEY")
+if not api_key or not api_key.startswith("nvapi-"):
+    raise ValueError("NVIDIA_API_KEY not found or invalid in .env file.")
+
 headers = {
-    "Authorization": "Bearer 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",
+    "Authorization": f"Bearer {api_key}",
     "Accept": "application/json",
 }
 
